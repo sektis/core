@@ -34,12 +34,12 @@ mix.js('resources/js/app.js', 'public/js')
     .options({
         hmrOptions: {
             host: 'localhost',
-            port: '9000' // webpack dever server port
+            port: '9000' // 여러 사이트 작업시 중복안되게
         }
     })
     .browserSync({
         open:false,
-        proxy: 'localhost:8001' // php server host:port (ex sekti.test), 80 기본포트는 안먹힘
+        proxy: 'core.test' // 내장서버든 홈스테드든 현재 사이트의 웹서버 주소 ( ex: localhost:8009 )
     });
 
 
