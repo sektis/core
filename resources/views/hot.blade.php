@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id="app">
-    <h1>22222</h1>
+    <h1>111</h1>
     <example-component></example-component>
 </div>
 <script src="{{ mix('js/app.js') }}"></script>

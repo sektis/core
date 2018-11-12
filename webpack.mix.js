@@ -39,7 +39,7 @@ mix.js('resources/js/app.js', 'public/js')
     })
     .browserSync({
         open:false,
-        proxy: 'core.test' // 내장서버든 홈스테드든 현재 사이트의 웹서버 주소 ( ex: localhost:8009 )
+        proxy: 'localhost:8001' // 내장서버든 홈스테드든 현재 사이트의 웹서버 주소 ( ex: localhost:8009 ) 80포트는 프록시가 안됨
     });
 
 
