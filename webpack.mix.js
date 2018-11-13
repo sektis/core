@@ -11,6 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
+
+mix.mergeManifest();
+
 Mix.listen('configReady', webpackConfig => {
     if (Mix.isUsing('hmr')) {
         // Remove leading '/' from entry keys
@@ -34,12 +37,12 @@ mix.js('resources/js/app.js', 'public/js')
     .options({
         hmrOptions: {
             host: 'localhost',
-            port: '9000' // 여러 사이트 작업시 중복안되게
+            port: '9005' // 여러 사이트 작업시 중복안되게
         }
     })
     .browserSync({
         open:false,
-        proxy: 'localhost:8001' // 내장서버든 홈스테드든 현재 사이트의 웹서버 주소 ( ex: localhost:8009 ) 80포트는 프록시가 안됨
+        proxy: 'localhost:8005' // 내장서버든 홈스테드든 현재 사이트의 웹서버 주소 ( ex: localhost:8009 ) 80포트는 프록시가 안됨
     });
 
 
